@@ -24,6 +24,12 @@
 
   <div class="container">
     <h1>My Materialize Page</h1>
+    <h3>Carousel</h3>
+<div class="carousel">
+  <a class="carousel-item" href="#one!"><img src="images/download (1).jpeg"></a>
+  <a class="carousel-item" href="#two!"><img src="images/download (2).jpeg"></a>
+  <a class="carousel-item" href="#three!"><img src="images/download.jpeg"></a>
+</div>
     <p>This page shows my work using Materialize components, custom images, and design.</p>
 
     <h2 class="blue-text text-darken-2">Welcome</h2>
@@ -34,28 +40,41 @@
 
     <h2 class="teal-text text-darken-2">My Images</h2>
     <div class="row">
-      <div class="col s12 m4">
-        <img src="photo1.jpg" alt="Image 1" class="responsive-img">
-      </div>
-      <div class="col s12 m4">
-        <img src="photo2.jpg" alt="Image 2" class="responsive-img">
-      </div>
-      <div class="col s12 m4">
-        <img src="photo3.jpg" alt="Image 3" class="responsive-img">
-      </div>
+      <img src="images/download (1).jpeg" alt="Image 1" class="responsive-img">
+<img src="images/download (2).jpeg" alt="Image 2" class="responsive-img">
+<img src="images/download.jpeg" alt="Image 3" class="responsive-img">
     </div>
 
     <h2 class="blue-text text-darken-2">Circular Image</h2>
     <div class="center-align">
-      <img src="photo1.jpg" alt="Circular Image" class="circle responsive-img" style="width: 250px; height: 250px; object-fit: cover;">
-    </div>
+<img src="images/download (1).jpeg" alt="Circular Image" class="circle responsive-img">    </div>
 
     <h2 class="teal-text text-darken-2">Video</h2>
     <div class="video-container">
       <iframe width="853" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
     </div>
+    <h3>FAQ</h3>
+<ul class="collapsible">
+  <li>
+    <div class="collapsible-header">Why did I use Materialize?</div>
+    <div class="collapsible-body"><span>It makes my site look clean and professional.</span></div>
+  </li>
+  <li>
+    <div class="collapsible-header">What does JavaScript do?</div>
+    <div class="collapsible-body"><span>It adds interactivity like sliding images and dropdown sections.</span></div>
+  </li>
+</ul>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems1 = document.querySelectorAll('.carousel');
+    M.Carousel.init(elems1);
+
+    var elems2 = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(elems2);
+  });
+</script>
 </body>
 </html>
