@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Page</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 20px auto;
+    }
+
+    #text {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV BAR -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="materialize.html">Materialize</a>
+    <a href="jquery.html">jQuery</a>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <h1>jQuery Interactions</h1>
+  <p>This page shows interactive features using jQuery.</p>
+
+  <img src="https://via.placeholder.com/300" width="300">
+
+  <!-- INTERACTION 1 -->
+  <h2>Hide & Show Box</h2>
+  <button id="hideBtn">Hide</button>
+  <button id="showBtn">Show</button>
+
+  <div id="box"></div>
+
+  <!-- INTERACTION 2 -->
+  <h2>Toggle Text</h2>
+  <button id="toggleBtn">Toggle Text</button>
+  <p id="text">This text will appear and disappear!</p>
+
+  <!-- INTERACTION 3 -->
+  <h2>Change Background Color</h2>
+  <button id="colorBtn">Change Color</button>
+
+  <!-- jQuery SCRIPT -->
+  <script>
+    $(document).ready(function(){
+
+      $("#hideBtn").click(function(){
+        $("#box").hide();
+      });
+
+      $("#showBtn").click(function(){
+        $("#box").show();
+      });
+
+      $("#toggleBtn").click(function(){
+        $("#text").toggle();
+      });
+
+      $("#colorBtn").click(function(){
+        $("body").css("background-color", "#d0f0ff");
+      });
+
+    });
+  </script>
+
+</body>
+</html>
